@@ -18,6 +18,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.squareup.picasso.Picasso;
 
+import uk.ac.tees.aad.sujith.eventplanner.user.ProfilePictureActivity;
+
 public class HomeFragment extends Fragment {
 
     @Nullable

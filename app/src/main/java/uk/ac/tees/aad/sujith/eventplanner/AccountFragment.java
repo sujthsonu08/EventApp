@@ -29,6 +29,10 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import uk.ac.tees.aad.sujith.eventplanner.user.LoginActivity;
+import uk.ac.tees.aad.sujith.eventplanner.user.ProfilePictureActivity;
+import uk.ac.tees.aad.sujith.eventplanner.user.User;
+
 public class AccountFragment extends Fragment {
     private TextView accountName;
     private TextView emailAccount;

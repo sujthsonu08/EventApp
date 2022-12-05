@@ -21,6 +21,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import uk.ac.tees.aad.sujith.eventplanner.user.User;
+
 public class RequestListItem extends AppCompatActivity implements RequestItemListener {
 
     private final String userName;

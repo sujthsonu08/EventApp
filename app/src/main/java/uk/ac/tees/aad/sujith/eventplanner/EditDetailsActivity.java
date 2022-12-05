@@ -36,6 +36,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import uk.ac.tees.aad.sujith.eventplanner.user.User;
+
 public class EditDetailsActivity extends AppCompatActivity {
     ImageView editPhoto;
     TextInputLayout phoneNumberUpdateHolder, addressLine1Holder, addressLine2Holder, addressLine3Holder;

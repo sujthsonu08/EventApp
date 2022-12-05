@@ -17,6 +17,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.time.LocalDate;
 
+import uk.ac.tees.aad.sujith.eventplanner.chat.ChatFragment;
+import uk.ac.tees.aad.sujith.eventplanner.todo.ToDoFragment;
+
 public class MainActivity extends AppCompatActivity {
 
     public static final String NOTIFICATION_CHANNEL_ID = "10001";

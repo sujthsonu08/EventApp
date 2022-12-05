@@ -25,6 +25,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.List;
 
+import uk.ac.tees.aad.sujith.eventplanner.user.User;
+
 public class RecyclerFoodAdapter extends RecyclerView.Adapter<RecyclerFoodAdapter.MyViewHolder> {
 
     Context context;

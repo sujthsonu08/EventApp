@@ -24,6 +24,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import uk.ac.tees.aad.sujith.eventplanner.user.User;
+
 
 public class Suggestions extends Fragment {
     private final ArrayList<RequestListItem> linkItemCardArrayList = new ArrayList<>();
