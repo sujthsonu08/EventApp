@@ -1,10 +1,12 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.chat;
 
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import uk.ac.tees.aad.sujith.eventplanner.R;
 
 public class ChatViewHolder extends RecyclerView.ViewHolder {
     public TextView userName;

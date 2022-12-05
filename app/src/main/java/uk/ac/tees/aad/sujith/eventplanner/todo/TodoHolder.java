@@ -1,4 +1,4 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.todo;
 
 import android.view.View;
 import android.widget.CheckBox;
@@ -6,6 +6,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import uk.ac.tees.aad.sujith.eventplanner.R;
 
 public class TodoHolder extends RecyclerView.ViewHolder {
 

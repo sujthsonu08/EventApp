@@ -1,4 +1,4 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.user;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +15,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import uk.ac.tees.aad.sujith.eventplanner.MainActivity;
+import uk.ac.tees.aad.sujith.eventplanner.R;
 
 public class LoginActivity extends AppCompatActivity {
     private TextInputLayout emailLoginHolder, passwordLoginHolder;

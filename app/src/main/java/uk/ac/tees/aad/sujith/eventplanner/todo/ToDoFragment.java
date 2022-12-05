@@ -1,4 +1,4 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.todo;
 
 import android.content.DialogInterface;
 import android.graphics.Canvas;
@@ -31,6 +31,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator;
+import uk.ac.tees.aad.sujith.eventplanner.R;
 
 public class ToDoFragment extends Fragment {
 

@@ -1,4 +1,4 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.user;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,6 +11,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.ortiz.touchview.TouchImageView;
 import com.squareup.picasso.Picasso;
+
+import uk.ac.tees.aad.sujith.eventplanner.R;
 
 public class ProfilePictureActivity extends AppCompatActivity {
     TouchImageView displayDP;

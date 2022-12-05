@@ -1,4 +1,4 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.chat;
 
 import android.content.Context;
 import android.net.Uri;
@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+
+import uk.ac.tees.aad.sujith.eventplanner.R;
 
 public class ChatViewAdapter extends RecyclerView.Adapter<ChatViewHolder> {
 

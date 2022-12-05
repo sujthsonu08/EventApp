@@ -1,4 +1,4 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.chat;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -22,6 +22,9 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
+import uk.ac.tees.aad.sujith.eventplanner.R;
+import uk.ac.tees.aad.sujith.eventplanner.user.User;
 
 public class ChatTabFragment extends Fragment {
     private final ArrayList<ChatTabItem> linkItemCardArrayList = new ArrayList<>();

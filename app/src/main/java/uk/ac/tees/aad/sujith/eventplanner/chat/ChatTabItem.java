@@ -1,10 +1,12 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.chat;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import uk.ac.tees.aad.sujith.eventplanner.R;
 
 public class ChatTabItem extends AppCompatActivity implements ChatItemListener {
 

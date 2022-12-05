@@ -1,4 +1,4 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.user;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,6 +23,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import uk.ac.tees.aad.sujith.eventplanner.R;
 
 public class SignupActivity extends AppCompatActivity {
     List<String> requestsReceived, requestsSent, address, foods, drinks;
