@@ -1,4 +1,4 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -22,6 +22,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import uk.ac.tees.aad.sujith.eventplanner.R;
+import uk.ac.tees.aad.sujith.eventplanner.SentAdapter;
+import uk.ac.tees.aad.sujith.eventplanner.SentItem;
 
 public class SentFragment extends Fragment {
 

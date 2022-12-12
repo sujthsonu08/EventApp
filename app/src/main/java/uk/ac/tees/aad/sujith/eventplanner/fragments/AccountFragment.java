@@ -1,4 +1,4 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.fragments;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -29,6 +29,9 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import uk.ac.tees.aad.sujith.eventplanner.EditDetailsActivity;
+import uk.ac.tees.aad.sujith.eventplanner.PreferencesActivity;
+import uk.ac.tees.aad.sujith.eventplanner.R;
 import uk.ac.tees.aad.sujith.eventplanner.user.LoginActivity;
 import uk.ac.tees.aad.sujith.eventplanner.user.ProfilePictureActivity;
 import uk.ac.tees.aad.sujith.eventplanner.user.User;

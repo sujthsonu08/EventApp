@@ -1,4 +1,4 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.fragments;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -18,6 +18,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.squareup.picasso.Picasso;
 
+import uk.ac.tees.aad.sujith.eventplanner.EventActivity;
+import uk.ac.tees.aad.sujith.eventplanner.R;
 import uk.ac.tees.aad.sujith.eventplanner.user.ProfilePictureActivity;
 
 public class HomeFragment extends Fragment {

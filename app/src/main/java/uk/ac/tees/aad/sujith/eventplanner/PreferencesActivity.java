@@ -12,6 +12,9 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 
+import uk.ac.tees.aad.sujith.eventplanner.fragments.DrinksFragment;
+import uk.ac.tees.aad.sujith.eventplanner.fragments.FoodsFragment;
+
 public class PreferencesActivity extends AppCompatActivity {
 
     @Override

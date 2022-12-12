@@ -14,7 +14,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.tabs.TabLayout;
 
 import uk.ac.tees.aad.sujith.eventplanner.R;
-import uk.ac.tees.aad.sujith.eventplanner.RequestsFragment;
+import uk.ac.tees.aad.sujith.eventplanner.fragments.RequestsFragment;
 import uk.ac.tees.aad.sujith.eventplanner.Suggestions;
 
 public class ChatFragment extends Fragment {

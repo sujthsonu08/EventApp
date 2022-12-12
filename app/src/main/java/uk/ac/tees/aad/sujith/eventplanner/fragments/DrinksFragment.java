@@ -1,4 +1,4 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.fragments;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -30,26 +30,28 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import uk.ac.tees.aad.sujith.eventplanner.R;
+import uk.ac.tees.aad.sujith.eventplanner.RecyclerDrinkAdapter;
 import uk.ac.tees.aad.sujith.eventplanner.user.User;
 
-public class FoodsFragment extends Fragment {
+public class DrinksFragment extends Fragment {
 
-    RecyclerView foodsRecycler;
+    RecyclerView drinksRecycler;
     DatabaseReference reference;
-    RecyclerFoodAdapter adapter;
-    List<String> foods;
-    FloatingActionButton fabFoods;
+    RecyclerDrinkAdapter adapter;
+    List<String> drinks;
+    FloatingActionButton fabDrinks;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_foods, container, false);
+        ViewGroup viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_drinks, container, false);
 
         FirebaseAuth authentication = FirebaseAuth.getInstance();
         FirebaseUser firebaseUser = authentication.getCurrentUser();
-        foodsRecycler = viewGroup.findViewById(R.id.foodsRecycler);
+        drinksRecycler = viewGroup.findViewById(R.id.drinksRecycler);
         reference = FirebaseDatabase.getInstance().getReference().child("Users");
-        foods = new ArrayList<>();
-        fabFoods = viewGroup.findViewById(R.id.fabFoods);
+        drinks = new ArrayList<>();
+        fabDrinks = viewGroup.findViewById(R.id.fabDrinks);
 
         if (firebaseUser != null) {
             String userId = firebaseUser.getUid();
@@ -58,13 +60,13 @@ public class FoodsFragment extends Fragment {
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     User user = snapshot.getValue(User.class);
                     if (user != null) {
-                        foods = user.preferences.get(0);
-                        adapter = new RecyclerFoodAdapter(getActivity(), user.preferences.get(0));
-                        foodsRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
-                        foodsRecycler.setAdapter(adapter);
+                        drinks = user.preferences.get(1);
+                        adapter = new RecyclerDrinkAdapter(getActivity(), user.preferences.get(1));
+                        drinksRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
+                        drinksRecycler.setAdapter(adapter);
                         adapter.notifyDataSetChanged();
                     } else {
-                        Toast.makeText(FoodsFragment.this.getActivity(), "User not found!!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(DrinksFragment.this.getActivity(), "User not found!!", Toast.LENGTH_LONG).show();
                     }
                 }
 
@@ -74,7 +76,7 @@ public class FoodsFragment extends Fragment {
                 }
             });
 
-            fabFoods.setOnClickListener(view -> {
+            fabDrinks.setOnClickListener(view -> {
                 Dialog d = new Dialog(getActivity());
                 d.setContentView(R.layout.activity_add);
                 EditText item = d.findViewById(R.id.item);
@@ -92,14 +94,14 @@ public class FoodsFragment extends Fragment {
                                 User user = snapshot.getValue(User.class);
                                 if (user != null) {
                                     List<List<String>> completePref = user.preferences;
-                                    completePref.get(0).add(itemName);
+                                    completePref.get(1).add(itemName);
                                     snapshot.getRef().child("preferences").setValue(completePref);
-                                    adapter = new RecyclerFoodAdapter(getActivity(), completePref.get(0));
-                                    foodsRecycler.setAdapter(adapter);
+                                    adapter = new RecyclerDrinkAdapter(getActivity(), completePref.get(1));
+                                    drinksRecycler.setAdapter(adapter);
                                     d.dismiss();
-                                    Toast.makeText(FoodsFragment.this.getActivity(), itemName + " has been added to your food preferences!", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(DrinksFragment.this.getActivity(), itemName + " has been added to your drink preferences!", Toast.LENGTH_LONG).show();
                                 } else {
-                                    Toast.makeText(FoodsFragment.this.getActivity(), "User not found!!", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(DrinksFragment.this.getActivity(), "User not found!!", Toast.LENGTH_LONG).show();
                                 }
                             }
 
@@ -131,30 +133,30 @@ public class FoodsFragment extends Fragment {
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             User user = snapshot.getValue(User.class);
                             if (user != null) {
-                                foods = user.preferences.get(0);
-                                String deletedFood = foods.get(viewHolder.getAdapterPosition());
-                                int deletedFoodIndex = viewHolder.getAdapterPosition();
+                                drinks = user.preferences.get(1);
+                                String deletedDrink = drinks.get(viewHolder.getAdapterPosition());
+                                int deletedDrinkIndex = viewHolder.getAdapterPosition();
                                 List<List<String>> completePref = user.preferences;
-                                completePref.get(0).remove(viewHolder.getAdapterPosition());
+                                completePref.get(1).remove(viewHolder.getAdapterPosition());
                                 snapshot.getRef().child("preferences").setValue(completePref);
-                                adapter = new RecyclerFoodAdapter(getActivity(), completePref.get(0));
-                                foodsRecycler.setAdapter(adapter);
+                                adapter = new RecyclerDrinkAdapter(getActivity(), completePref.get(1));
+                                drinksRecycler.setAdapter(adapter);
                                 final Snackbar snackbar = Snackbar
-                                        .make(foodsRecycler, deletedFood + " removed", Snackbar.LENGTH_LONG);
+                                        .make(drinksRecycler, deletedDrink + " removed", Snackbar.LENGTH_LONG);
                                 snackbar.setAction("UNDO", view -> {
-                                    adapter.undo(deletedFood, deletedFoodIndex);
+                                    adapter.undo(deletedDrink, deletedDrinkIndex);
                                     reference.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
                                         @Override
                                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                                             User user = snapshot.getValue(User.class);
                                             if (user != null) {
                                                 List<List<String>> completePref = user.preferences;
-                                                completePref.get(0).add(deletedFood);
+                                                completePref.get(1).add(deletedDrink);
                                                 snapshot.getRef().child("preferences").setValue(completePref);
-                                                adapter = new RecyclerFoodAdapter(getActivity(), completePref.get(0));
-                                                foodsRecycler.setAdapter(adapter);
+                                                adapter = new RecyclerDrinkAdapter(getActivity(), completePref.get(1));
+                                                drinksRecycler.setAdapter(adapter);
                                             } else {
-                                                Toast.makeText(FoodsFragment.this.getActivity(), "User not found!!", Toast.LENGTH_LONG).show();
+                                                Toast.makeText(DrinksFragment.this.getActivity(), "User not found!!", Toast.LENGTH_LONG).show();
                                             }
                                         }
 
@@ -167,7 +169,7 @@ public class FoodsFragment extends Fragment {
                                 snackbar.setActionTextColor(ContextCompat.getColor(getActivity(), R.color.purple_500));
                                 snackbar.show();
                             } else {
-                                Toast.makeText(FoodsFragment.this.getActivity(), "User not found!!", Toast.LENGTH_LONG).show();
+                                Toast.makeText(DrinksFragment.this.getActivity(), "User not found!!", Toast.LENGTH_LONG).show();
                             }
                         }
 
@@ -178,9 +180,9 @@ public class FoodsFragment extends Fragment {
                     });
                 }
             };
-            new ItemTouchHelper(swipe).attachToRecyclerView(foodsRecycler);
+            new ItemTouchHelper(swipe).attachToRecyclerView(drinksRecycler);
         } else {
-            Toast.makeText(FoodsFragment.this.getActivity(), "User not found!!", Toast.LENGTH_LONG).show();
+            Toast.makeText(DrinksFragment.this.getActivity(), "User not found!!", Toast.LENGTH_LONG).show();
         }
         return viewGroup;
     }
