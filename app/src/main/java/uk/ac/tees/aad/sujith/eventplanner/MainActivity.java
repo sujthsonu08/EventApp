@@ -21,12 +21,11 @@ import uk.ac.tees.aad.sujith.eventplanner.chat.ChatFragment;
 import uk.ac.tees.aad.sujith.eventplanner.fragments.AccountFragment;
 import uk.ac.tees.aad.sujith.eventplanner.fragments.EventsFragment;
 import uk.ac.tees.aad.sujith.eventplanner.fragments.HomeFragment;
+import uk.ac.tees.aad.sujith.eventplanner.fragments.MapsFragment;
 import uk.ac.tees.aad.sujith.eventplanner.todo.ToDoFragment;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String NOTIFICATION_CHANNEL_ID = "10001";
-    private final static String default_notification_channel_id = "default";
     private static MainActivity instance;
     Handler handler;
 
@@ -50,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new HomeFragment();
                     break;
                 case R.id.chat:
-                    fragment = new ChatFragment();
+                    fragment = new MapsFragment();
                     break;
                 case R.id.events:
                     fragment = new EventsFragment();
@@ -67,45 +66,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragments, new HomeFragment()).commit();
-        RunEveryFriday();
-    }
 
-    private void RunEveryFriday() {
-        handler = new Handler();
-        Runnable run = new Runnable() {
-            @Override
-            public void run() {
-                String day = LocalDate.now().getDayOfWeek().name();
-                if (day.equals("FRIDAY")) {
-                    sendNotification("No User", "Yayyy, its FRIYAYY");
-                }
-                handler.postDelayed(this, 3600000);
-            }
-        };
-        handler.post(run);
-    }
-
-    public void sendNotification(String sentUser, String message) {
-        Bitmap icon = BitmapFactory.decodeResource(getResources(),
-                R.drawable.user);
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity.this,
-                default_notification_channel_id)
-                .setSmallIcon(R.drawable.user)
-                .setLargeIcon(icon)
-                .setAutoCancel(true)
-                .setPriority(1)
-                .setContentTitle("Received New Notification")
-                .setContentText(message);
-        NotificationManager mngr = (NotificationManager) getSystemService(MainActivity.NOTIFICATION_SERVICE);
-        int importance = NotificationManager.IMPORTANCE_HIGH;
-        NotificationChannel channel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "notification channel", importance);
-        channel.enableLights(true);
-        channel.setLightColor(Color.RED);
-        channel.enableVibration(true);
-        channel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
-        channel.setDescription("Just a notification description");
-        builder.setChannelId(NOTIFICATION_CHANNEL_ID);
-        mngr.createNotificationChannel(channel);
-        mngr.notify((int) System.currentTimeMillis(), builder.build());
     }
 }
