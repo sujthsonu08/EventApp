@@ -1,4 +1,4 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.invite;
 
 public class InviteItem {
 

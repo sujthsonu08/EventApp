@@ -1,4 +1,4 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.adapter;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -25,6 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.List;
 
+import uk.ac.tees.aad.sujith.eventplanner.R;
 import uk.ac.tees.aad.sujith.eventplanner.user.User;
 
 public class RecyclerDrinkAdapter extends RecyclerView.Adapter<RecyclerDrinkAdapter.MyViewHolder> {

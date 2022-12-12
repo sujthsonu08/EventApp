@@ -1,4 +1,4 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.user;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -28,7 +28,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-import uk.ac.tees.aad.sujith.eventplanner.user.User;
+import uk.ac.tees.aad.sujith.eventplanner.R;
 
 public class ViewProfile extends AppCompatActivity {
 

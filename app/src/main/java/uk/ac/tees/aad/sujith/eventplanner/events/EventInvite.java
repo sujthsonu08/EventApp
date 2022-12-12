@@ -1,4 +1,4 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.events;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
@@ -25,6 +25,10 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+
+import uk.ac.tees.aad.sujith.eventplanner.MainActivity;
+import uk.ac.tees.aad.sujith.eventplanner.adapter.PlacesActivity;
+import uk.ac.tees.aad.sujith.eventplanner.R;
 
 public class EventInvite extends AppCompatActivity {
 

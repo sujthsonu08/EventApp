@@ -1,4 +1,4 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +8,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+
+import uk.ac.tees.aad.sujith.eventplanner.R;
+import uk.ac.tees.aad.sujith.eventplanner.RequestItemListener;
+import uk.ac.tees.aad.sujith.eventplanner.RequestListItem;
+import uk.ac.tees.aad.sujith.eventplanner.RequestViewHolder;
 
 public class RequestViewAdapter extends RecyclerView.Adapter<RequestViewHolder> {
 

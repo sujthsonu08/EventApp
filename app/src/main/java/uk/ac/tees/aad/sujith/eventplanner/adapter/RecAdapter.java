@@ -1,4 +1,4 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,6 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 import java.util.Map;
+
+import uk.ac.tees.aad.sujith.eventplanner.R;
+import uk.ac.tees.aad.sujith.eventplanner.RecItem;
+import uk.ac.tees.aad.sujith.eventplanner.ShowRecCard;
 
 public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder>{
 
@@ -45,7 +49,7 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder>{
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context,ShowRecCard.class);
+                Intent intent = new Intent(context, ShowRecCard.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 Bundle extras = new Bundle();
                 extras.putString("eventName",eventName);

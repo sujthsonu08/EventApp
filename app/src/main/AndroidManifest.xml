@@ -25,19 +25,19 @@
             android:name=".EditVenue"
             android:exported="false" />
         <activity
-            android:name=".PlacesActivity"
+            android:name=".adapter.PlacesActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
-            android:name=".EventInvite"
+            android:name=".events.EventInvite"
             android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
-            android:name=".EventActivity"
+            android:name=".events.EventActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
-            android:name=".ViewProfile"
+            android:name=".user.ViewProfile"
             android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
@@ -53,7 +53,7 @@
             android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
-            android:name=".Invite"
+            android:name=".invite.Invite"
             android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity

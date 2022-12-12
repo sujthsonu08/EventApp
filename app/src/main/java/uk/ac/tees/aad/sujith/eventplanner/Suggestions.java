@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import uk.ac.tees.aad.sujith.eventplanner.adapter.RequestViewAdapter;
 import uk.ac.tees.aad.sujith.eventplanner.user.User;
 
 

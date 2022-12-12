@@ -61,47 +61,7 @@ public class ChatTabFragment extends Fragment {
         String userId = authentication.getCurrentUser().getUid();
         final int[] usersCount = new int[1];
 
-        dataSnapshot.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                usersCount[0] = (int) snapshot.child("friendsList").getChildrenCount();
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
-        dataSnapshot.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                User details = snapshot.getValue(User.class);
-                assert details != null;
-                Map<String, List<String>> friendsList = details.friendsList;
-                if (friendsList.size() > 0) {
-                    for (Map.Entry<String, List<String>> entry : friendsList.entrySet()) {
-                        String email = entry.getKey();
-                        if (email.equals("dummy")) {
-                            continue;
-                        }
-                        String username = entry.getValue().get(0);
-                        email = cleanEmail(email);
-                        String profileImage = entry.getValue().get(1);
-                        ChatTabItem itemCard = new ChatTabItem(username, email, profileImage);
-                        linkItemCardArrayList.add(itemCard);
-                        itemviewAdapter.notifyItemInserted(0);
-                    }
-                    if (linkItemCardArrayList.size() >= usersCount[0] - 1) {
-                        progressBar.setVisibility(View.GONE);
-                    }
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-            }
-        });
     }
 
     private String cleanEmail(String email) {

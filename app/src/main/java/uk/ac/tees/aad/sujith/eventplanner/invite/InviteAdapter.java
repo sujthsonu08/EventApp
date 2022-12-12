@@ -1,4 +1,4 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.invite;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import uk.ac.tees.aad.sujith.eventplanner.R;
 
 public class InviteAdapter extends RecyclerView.Adapter<InviteAdapter.ViewHolder> {
 

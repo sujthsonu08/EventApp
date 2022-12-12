@@ -27,7 +27,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import uk.ac.tees.aad.sujith.eventplanner.R;
-import uk.ac.tees.aad.sujith.eventplanner.ViewProfile;
+import uk.ac.tees.aad.sujith.eventplanner.user.ViewProfile;
 import uk.ac.tees.aad.sujith.eventplanner.user.User;
 
 public class ChatWindowActivity extends AppCompatActivity {

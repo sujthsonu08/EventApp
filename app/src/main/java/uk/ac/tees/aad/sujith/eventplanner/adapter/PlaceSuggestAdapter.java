@@ -1,4 +1,4 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.adapter;
 
 import android.content.Context;
 import android.widget.ArrayAdapter;

@@ -1,4 +1,4 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.adapter;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,9 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import uk.ac.tees.aad.sujith.eventplanner.R;
+import uk.ac.tees.aad.sujith.eventplanner.events.EventInvite;
 
 public class PlacesActivity extends AppCompatActivity {
     @Override

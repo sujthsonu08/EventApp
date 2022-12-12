@@ -1,4 +1,4 @@
-package uk.ac.tees.aad.sujith.eventplanner;
+package uk.ac.tees.aad.sujith.eventplanner.invite;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,6 +22,9 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+import uk.ac.tees.aad.sujith.eventplanner.MainActivity;
+import uk.ac.tees.aad.sujith.eventplanner.R;
 
 public class Invite extends AppCompatActivity {
 
