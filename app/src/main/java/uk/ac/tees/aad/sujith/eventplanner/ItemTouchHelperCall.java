@@ -8,6 +8,8 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
+import uk.ac.tees.aad.sujith.eventplanner.adapter.RecyclerFoodAdapter;
+
 public class ItemTouchHelperCall extends ItemTouchHelper.Callback {
     ItemTouch itemTouch;
 

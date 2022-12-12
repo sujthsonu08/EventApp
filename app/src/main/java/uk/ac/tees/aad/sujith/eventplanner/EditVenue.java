@@ -6,6 +6,8 @@ import android.widget.AutoCompleteTextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import uk.ac.tees.aad.sujith.eventplanner.adapter.PlaceSuggestAdapter;
+
 public class EditVenue extends AppCompatActivity {
 
     @Override

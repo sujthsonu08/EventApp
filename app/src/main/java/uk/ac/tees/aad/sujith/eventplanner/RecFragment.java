@@ -23,6 +23,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import uk.ac.tees.aad.sujith.eventplanner.adapter.RecAdapter;
+
 public class RecFragment extends Fragment {
 
     ArrayList<RecItem> recList;

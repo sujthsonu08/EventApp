@@ -27,7 +27,7 @@ import java.util.List;
 import uk.ac.tees.aad.sujith.eventplanner.R;
 import uk.ac.tees.aad.sujith.eventplanner.RequestItemListener;
 import uk.ac.tees.aad.sujith.eventplanner.RequestListItem;
-import uk.ac.tees.aad.sujith.eventplanner.RequestViewAdapter;
+import uk.ac.tees.aad.sujith.eventplanner.adapter.RequestViewAdapter;
 import uk.ac.tees.aad.sujith.eventplanner.user.User;
 
 public class RequestsFragment extends Fragment {

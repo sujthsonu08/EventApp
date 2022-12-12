@@ -16,6 +16,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import uk.ac.tees.aad.sujith.eventplanner.invite.Invite;
+
 public class SentAdapter extends RecyclerView.Adapter<SentAdapter.ViewHolder>{
 
     private final List<SentItem> sentList;
@@ -55,7 +57,7 @@ public class SentAdapter extends RecyclerView.Adapter<SentAdapter.ViewHolder>{
         });
 
         holder.invite.setOnClickListener(view -> {
-            Intent intent = new Intent(context,Invite.class);
+            Intent intent = new Intent(context, Invite.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             Bundle extras = new Bundle();
             extras.putStringArrayList("invitees",(ArrayList<String>) invMap.get(eventName));

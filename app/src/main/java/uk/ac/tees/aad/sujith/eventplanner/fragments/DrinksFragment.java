@@ -31,7 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import uk.ac.tees.aad.sujith.eventplanner.R;
-import uk.ac.tees.aad.sujith.eventplanner.RecyclerDrinkAdapter;
+import uk.ac.tees.aad.sujith.eventplanner.adapter.RecyclerDrinkAdapter;
 import uk.ac.tees.aad.sujith.eventplanner.user.User;
 
 public class DrinksFragment extends Fragment {
