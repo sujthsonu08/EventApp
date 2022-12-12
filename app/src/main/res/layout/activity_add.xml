@@ -7,7 +7,7 @@
     <LinearLayout
         android:layout_width="300dp"
         android:layout_height="170dp"
-        android:background="#A846F4"
+        android:background="#58CFAE"
         android:orientation="vertical"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="43dp"
             android:gravity="center"
-            android:text="Add Item"
+            android:text="@string/add_item"
             android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -38,7 +38,7 @@
             android:layout_marginTop="6dp"
             android:autofillHints=""
             android:background="@color/white"
-            android:hint="Enter Item"
+            android:hint="@string/enter_item"
             android:inputType="text"
             android:padding="13dp"
             android:textColor="@color/black"
@@ -58,7 +58,7 @@
                 android:layout_width="7dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="#A846F4" />
+                android:background="#58CFAE" />
 
             <Button
                 android:id="@+id/buttonCancel"
@@ -68,13 +68,13 @@
                 android:layout_gravity="center"
                 android:backgroundTint="@color/white"
                 android:text="@string/cancel"
-                android:textColor="#A846F4"/>
+                android:textColor="#58CFAE"/>
 
             <View
                 android:layout_width="7dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="#A846F4" />
+                android:background="#58CFAE" />
 
             <Button
                 android:id="@+id/buttonAdd"
@@ -84,13 +84,13 @@
                 android:layout_weight="1"
                 android:backgroundTint="@color/white"
                 android:text="@string/add"
-                android:textColor="#A846F4"/>
+                android:textColor="#58CFAE"/>
 
             <View
                 android:layout_width="7dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="#A846F4" />
+                android:background="#58CFAE" />
 
         </LinearLayout>
 

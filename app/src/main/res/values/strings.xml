@@ -62,4 +62,6 @@
     <string name="template_8">Template 8</string>
     <string name="choose_a_template">Choose a Template</string>
     <string name="api_key">AIzaSyAMMa12XoyVpp7pfsnywhD-zRdNHNJ0dl0</string>
+    <string name="add_item">Add Item</string>
+    <string name="enter_item">Enter Item</string>
 </resources>
