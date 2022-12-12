@@ -62,7 +62,7 @@
                         app:boxStrokeWidth="0dp"
                         app:boxStrokeWidthFocused="0dp"
                         app:endIconMode="clear_text"
-                        app:endIconTint="#A846F4">
+                        app:endIconTint="#46F4C3">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/date"
@@ -71,7 +71,7 @@
                             android:autofillHints=""
                             android:background="@drawable/edittext_back"
                             android:ems="10"
-                            android:hint="Date"
+                            android:hint="@string/date"
                             android:inputType="date"
                             android:textColor="@color/black" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -83,7 +83,7 @@
                         android:layout_marginStart="6dp"
                         android:layout_marginTop="8dp"
                         android:layout_weight="1"
-                        android:text="Pick Date"
+                        android:text="@string/pick_date"
                         android:textColor="@color/white" />
                 </LinearLayout>
 
@@ -105,7 +105,7 @@
                         app:boxStrokeWidth="0dp"
                         app:boxStrokeWidthFocused="0dp"
                         app:endIconMode="clear_text"
-                        app:endIconTint="#A846F4">
+                        app:endIconTint="#58CFAE">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/time"
@@ -126,7 +126,7 @@
                         android:layout_marginStart="6dp"
                         android:layout_marginTop="8dp"
                         android:layout_weight="1"
-                        android:text="Pick Time"
+                        android:text="@string/pick_time"
                         android:textColor="@color/white" />
                 </LinearLayout>
 
@@ -140,7 +140,7 @@
                     app:boxStrokeWidth="0dp"
                     app:boxStrokeWidthFocused="0dp"
                     app:endIconMode="clear_text"
-                    app:endIconTint="#A846F4">
+                    app:endIconTint="#58CFAE">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/addressDisplayEdit"
@@ -149,7 +149,7 @@
                         android:autofillHints=""
                         android:background="@drawable/edittext_back"
                         android:ems="10"
-                        android:hint="Event Address"
+                        android:hint="@string/event_address"
                         android:inputType="textCapWords"
                         android:textColor="@color/black" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -159,7 +159,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="65dp"
                     android:layout_marginTop="16dp"
-                    android:text="Select location"
+                    android:text="@string/select_location"
                     android:textColor="@color/white" />
 
                 <LinearLayout
@@ -173,7 +173,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="50dp"
                         android:layout_marginTop="30dp"
-                        android:text="CANCEL"
+                        android:text="@string/cancel"
                         android:textColor="@color/white" />
 
                     <Button
